@@ -1,6 +1,5 @@
-import {Text, View} from "react-native";
+import {Text, View, StyleSheet} from "react-native";
 import Todo, { Task } from "./todo";
-
 
 
 export default function TodoList() {
@@ -11,6 +10,10 @@ export default function TodoList() {
 		},
 		{
 			name: "Task 2",
+			status: false,
+		},
+		{
+			name: "Task 3",
 			status: false,
 		}
 	];
@@ -23,3 +26,11 @@ export default function TodoList() {
 		</View>
 	)
 }
+
+const styles = StyleSheet.create({
+	tasklist: {
+		flex: 1,
+		flexDirection: "column",
+		alignItems: "center",
+	}
+});
